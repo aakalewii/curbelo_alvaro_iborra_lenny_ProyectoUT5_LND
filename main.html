@@ -14,14 +14,43 @@
             color: #333;
         }
         header {
-            font-family: Playfair Dsiplay;
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
+        font-family: Playfair Display;
+        background: #eee8df;
+        color: #333;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+
+        header .logo {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            flex: 1;
+            text-align: left;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
         }
         nav {
-            background: #444;
+            background: #eee8df;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -47,10 +76,11 @@
             color: #444;
         }
         footer {
+            font-family: Playfair Display;
             text-align: center;
             padding: 10px 0;
-            background: #333;
-            color: #fff;
+            background: #eee8df;
+            color: #333;
             margin-top: 20px;
         }
         ul {
@@ -60,18 +90,21 @@
 </head>
 <body>
     <header>
+        <a href="main.html">
+            <img src="logo.png" alt="Logo Crónicas de Jaque" class="logo">
+        </a>
         <h1>Crónicas de Jaque</h1>
+        <nav>
+            <a href="historia.html">Historia</a>
+            <a href="lista.html">Lista de Torneos</a>
+            <a href="reglas.html">Cómo jugar</a>
+            <a href="galeria.html">Galería multimedia</a>
+        </nav>
     </header>
-    <nav>
-        <a href="historia.html">Historia</a>
-        <a href="lista.html">Lista de Torneos</a>
-        <a href="reglas.html">Cómo jugar</a>
-        <a href="galeria.html">Galería multimedia</a>
-    </nav>
     <main>
         <section id="que-es">
             <h2>¿Qué es el ajedrez?</h2>
-            <p>El ajedrez es mucho más que un simple juego de mesa: es un duelo de mentes, una batalla silenciosa donde cada movimiento cuenta y la estrategia lo es todo. Imagina un campo de batalla cuadriculado de 64 casillas, donde dos ejércitos —uno blanco y otro negro— se enfrentan con el objetivo de capturar al rey enemigo. Pero aquí no gana quien sea más fuerte físicamente, sino quien piense mejor, quien anticipe, quien planee con astucia.<br><br>
+            <p>El ajedrez es mucho más que un simple juego de mesa: es un duelo de mentes, una batalla silenciosa donde cada movimiento cuenta y la estrategia lo es todo. Imagina un campo de batalla cuadriculado de 64 casillas, donde dos ejércitos (uno blanco y otro negro) se enfrentan con el objetivo de capturar al rey enemigo. Pero aquí no gana quien sea más fuerte físicamente, sino quien piense mejor, quien anticipe, quien planee con astucia.<br><br>
 
                 Cada pieza tiene su propio carácter: las torres son sólidas y directas, los caballos se mueven en saltos impredecibles, los alfiles cortan en diagonal como cuchillas, la dama (o reina) es la más poderosa del tablero, capaz de ir en todas direcciones, y el rey, aunque lento, es la figura clave del juego. Los peones, pequeños y aparentemente débiles, esconden un gran potencial: si llegan al otro extremo del tablero, pueden transformarse en cualquier otra pieza.<br><br>
                 
