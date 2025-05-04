@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE federacion>
+<?xml-stylesheet type="text/xsl" href="torneo1.xsl"?>
 <federacion>
 
     <torneo>
