@@ -183,7 +183,7 @@
             <h2>Lista de torneos</h2>
             <p>Aquí tienes una lista de algunos torneos de ajedrez destacados (Clickea en cada uno de ellos para ver un resumen más detallado):</p>
             <ul>
-                <li>Torneo Nacional de Ajedrez (2025-03-10)</li>
+                <li id="torneo-nacional">Torneo Nacional de Ajedrez (2025-03-10)</li>
                 <script>
                     document.getElementById("torneo-nacional").addEventListener("click", function () {
                         fetch("Grupo2.xml")
@@ -192,12 +192,13 @@
                                 const parser = new DOMParser();
                                 const xmlDoc = parser.parseFromString(data, "application/xml");
                 
-                                // Buscar el torneo por nombre
-                                const torneo = xmlDoc.querySelector("torneo > nombre:contains('Torneo Nacional de Ajedrez')");
+                                // Buscar el torneo por su atributo id
+                                const torneo = xmlDoc.querySelector("torneo[id='01']");
                 
                                 if (torneo) {
-                                    const fecha = torneo.parentElement.querySelector("fecha").textContent;
-                                    alert(`Torneo: ${torneo.textContent}\nFecha: ${fecha}`);
+                                    const nombre = torneo.querySelector("nombre").textContent;
+                                    const fecha = torneo.querySelector("fecha").textContent;
+                                    alert(`Torneo: ${nombre}\nFecha: ${fecha}`);
                                 } else {
                                     alert("Torneo no encontrado.");
                                 }
