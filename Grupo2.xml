@@ -2,18 +2,18 @@
 <?xml-stylesheet type="text/xsl" href="torneo1.xsl"?>
 <federacion>
 
-    <torneo>
+    <torneo id="01">
         <nombre>Torneo Nacional de Ajedrez</nombre>
         <fecha>2025-03-10</fecha>
 
-        <partida>
+        <partida id="01">
             <jugador1>José Martínez</jugador1>
             <jugador2>Ana Rodríguez</jugador2>
             <resultado>Jugador 1</resultado>
             <duracion>45</duracion>
         </partida>
 
-        <partida>
+        <partida id="02">
             <jugador1>Pedro Gómez</jugador1>
             <jugador2>Elena García</jugador2>
             <resultado>Empate</resultado>
