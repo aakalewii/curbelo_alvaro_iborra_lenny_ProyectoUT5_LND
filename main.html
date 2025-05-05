@@ -184,6 +184,27 @@
             <p>Aquí tienes una lista de algunos torneos de ajedrez destacados (Clickea en cada uno de ellos para ver un resumen más detallado):</p>
             <ul>
                 <li>Torneo Nacional de Ajedrez (2025-03-10)</li>
+                <script>
+                    document.getElementById("torneo-nacional").addEventListener("click", function () {
+                        fetch("Grupo2.xml")
+                            .then(response => response.text())
+                            .then(data => {
+                                const parser = new DOMParser();
+                                const xmlDoc = parser.parseFromString(data, "application/xml");
+                
+                                // Buscar el torneo por nombre
+                                const torneo = xmlDoc.querySelector("torneo > nombre:contains('Torneo Nacional de Ajedrez')");
+                
+                                if (torneo) {
+                                    const fecha = torneo.parentElement.querySelector("fecha").textContent;
+                                    alert(`Torneo: ${torneo.textContent}\nFecha: ${fecha}`);
+                                } else {
+                                    alert("Torneo no encontrado.");
+                                }
+                            })
+                            .catch(error => console.error("Error al cargar el archivo XML:", error));
+                    });
+                </script>
                 <li>Open Internacional (2025-04-15)</li>
                 <li>Campeonato Regional Sur (2025-05-02)</li>
                 <li>Copa Ciudad Valenciana (2024-06-12)</li>
