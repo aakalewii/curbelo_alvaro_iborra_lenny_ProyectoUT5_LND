@@ -23,7 +23,7 @@
                 </nav>
             </header>
             <main>
-                <xsl:for-each select="torneo[@id='02']">
+                <xsl:for-each select="torneo[@id='04']">
                     <h2><xsl:value-of select="nombre" /></h2>
                     <p><strong>Fecha:</strong> <xsl:value-of select="fecha" /></p>
                     <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">

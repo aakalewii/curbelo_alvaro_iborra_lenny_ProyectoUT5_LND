@@ -185,33 +185,35 @@
             <ul>
                 <li id="torneo-nacional">Torneo Nacional de Ajedrez (2025-03-10)</li>
                 <script>
-                    document.getElementById("torneo-nacional").addEventListener("click", function () {
-                        fetch("Grupo2.xml")
-                            .then(response => response.text())
-                            .then(data => {
-                                const parser = new DOMParser();
-                                const xmlDoc = parser.parseFromString(data, "application/xml");
-                
-                                // Buscar el torneo por su atributo id
-                                const torneo = xmlDoc.querySelector("torneo[id='01']");
-                
-                                if (torneo) {
-                                    const nombre = torneo.querySelector("nombre").textContent;
-                                    const fecha = torneo.querySelector("fecha").textContent;
-                                    alert(`Torneo: ${nombre}\nFecha: ${fecha}`);
-                                } else {
-                                    alert("Torneo no encontrado.");
-                                }
-                            })
-                            .catch(error => console.error("Error al cargar el archivo XML:", error));
-                    });
-                </script>
-                <li>Open Internacional (2025-04-15)</li>
-                <li>Campeonato Regional Sur (2025-05-02)</li>
-                <li>Copa Ciudad Valenciana (2024-06-12)</li>
-                <li>Torneo Juvenil Primavera (2024-07-05)</li>
+            document.getElementById("torneo-nacional").addEventListener("click", function () {
+                window.location.href = "Grupo2.xml";
+            });
+        </script>
+                <li id="open">Open Internacional (2025-04-15)</li>
+		<script>
+            document.getElementById("open").addEventListener("click", function () {
+                window.location.href = "Grupo2Tabla2.xml";
+            });
+        	</script>
+                <li id="regional">Campeonato Regional Sur (2025-05-02)</li>
+		<script>
+            document.getElementById("regional").addEventListener("click", function () {
+                window.location.href = "Grupo2Tabla3.xml";
+            });
+        	</script>
+                <li id="copa">Copa Ciudad Valenciana (2024-06-12)</li>
+		<script>
+            document.getElementById("copa").addEventListener("click", function () {
+                window.location.href = "Grupo2Tabla4.xml";
+            });
+        	</script>
+                <li id="primavera">Torneo Juvenil Primavera (2024-07-05)</li>
+		<script>
+            document.getElementById("primavera").addEventListener("click", function () {
+                window.location.href = "Grupo2Tabla5.xml";
+            });
+        	</script>
             </ul>
-
     </main>
     <footer>
         <p>&copy; 2025 Crónicas del Jaque | Álvaro Curbelo y Lenny Iborra.</p>
