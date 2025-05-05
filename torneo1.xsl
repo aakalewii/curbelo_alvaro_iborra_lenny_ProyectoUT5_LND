@@ -27,18 +27,13 @@
             <main>
                 <h2><xsl:value-of select="torneo/nombre" /></h2>
                 <p><strong>Fecha:</strong> <xsl:value-of select="torneo/fecha" /></p>
-
-
                 <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
-                    <thead>
                         <tr>
                             <th>Jugador 1</th>
                             <th>Jugador 2</th>
                             <th>Resultado</th>
                             <th>Duración (minutos)</th>
                         </tr>
-                    </thead>
-                    <tbody>
                         <xsl:for-each select="torneo/partida">
                             <tr>
                                 <td><xsl:value-of select="jugador1" /></td>
@@ -47,7 +42,6 @@
                                 <td><xsl:value-of select="duracion" /></td>
                             </tr>
                         </xsl:for-each>
-                    </tbody>
                 </table>
             </main>
             <footer>
