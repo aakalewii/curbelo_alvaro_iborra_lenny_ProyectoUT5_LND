@@ -75,6 +75,22 @@ nav a:hover {
     text-decoration: underline;
 }
 
-* {
-    padding: 20px;
+
+footer {
+    font-family: Playfair Display;
+    text-align: center;
+    padding: 10px 0;
+    background: #eee8df;
+    color: #333;
+    margin-top: 20px;
 }
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    }
