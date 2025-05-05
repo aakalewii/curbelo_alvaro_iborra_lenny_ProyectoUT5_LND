@@ -17,9 +17,6 @@
                 <h1>Crónicas de Jaque</h1>
                 <nav>
                     <a href="main.html">Inicio</a>
-                    <a href="#historia">Historia</a>
-                    <a href="#reglas">Reglas</a>
-                    <a href="#lista">Lista de Torneos</a>
                 </nav>
             </header>
             <main>
