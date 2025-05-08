@@ -195,32 +195,49 @@
                 <li id="torneo-nacional">Torneo Nacional de Ajedrez (2025-03-10)</li>
                 <script>
             document.getElementById("torneo-nacional").addEventListener("click", function () {
-                window.location.href = "Grupo2.xml";
+            try {
+                window.location.href = "Gru.xml";
+            } catch (error) {
+                alert("Error: No se pudo abrir el archivo XML.");
+            }
             });
-        </script>
+            </script>
                 <li id="open">Open Internacional (2025-04-15)</li>
-		<script>
+		    <script>
             document.getElementById("open").addEventListener("click", function () {
+            try {
                 window.location.href = "Grupo2Tabla2.xml";
+            }catch (error) {
+                alert("Error: No se pudo abrir el archivo XML.")
+            }
             });
         	</script>
                 <li id="regional">Campeonato Regional Sur (2025-05-02)</li>
-		<script>
+		    <script>
             document.getElementById("regional").addEventListener("click", function () {
+                try {
                 window.location.href = "Grupo2Tabla3.xml";
-            });
+            }catch (error) {
+                alert("Error: No se pudo abrir el archivo XML.")
+            }            });
         	</script>
                 <li id="copa">Copa Ciudad Valenciana (2024-06-12)</li>
-		<script>
+		    <script>
             document.getElementById("copa").addEventListener("click", function () {
+                try {
                 window.location.href = "Grupo2Tabla4.xml";
-            });
+            }catch (error) {
+                alert("Error: No se pudo abrir el archivo XML.")
+            }            });
         	</script>
                 <li id="primavera">Torneo Juvenil Primavera (2024-07-05)</li>
-		<script>
+		    <script>
             document.getElementById("primavera").addEventListener("click", function () {
+                try {
                 window.location.href = "Grupo2Tabla5.xml";
-            });
+            }catch (error) {
+                alert("Error: No se pudo abrir el archivo XML.")
+            }            });
         	</script>
             </ul>
     </main>
